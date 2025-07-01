@@ -1,0 +1,116 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, #004080, #c8102e);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.logo {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+/* Navigation */
+.main-nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.main-nav a {
+  margin: 0 15px;
+  color: #004080;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #c8102e;
+}
+
+/* Main Content */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: #004080;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Services List */
+ul.services-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Accessories Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Quote Form */
+.quote-form {
+  display: grid;
+  gap: 15px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.quote-form button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: not-allowed;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #004080;
+  color: white;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
