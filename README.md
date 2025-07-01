@@ -1,49 +1,4 @@
 # Nsk-phone-website-
-NSK phone repair and accessories 
-import zipfile
-
-# Redefine all required contents due to execution state reset
-
-# HTML content (simplified from earlier version)
-html_content = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="QXkCVBc29V6k2V2Elm5wasHicEVcewsXF487Wn7hrVQ" />
-  <title>NSK Phone Repair & Accessories</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="hero">
-    <img src="nsk-logo.png" alt="NSK Logo" class="logo" />
-    <h1>NSK Phone Repair & Accessories</h1>
-    <p>Your trusted repair partner in Windhoek</p>
-  </header>
-  <nav class="main-nav">
-    <a href="#about">About Us</a>
-    <a href="#mission">Mission</a>
-    <a href="#services">Services</a>
-    <a href="#accessories">Accessories</a>
-    <a href="#quote">Request a Quote</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <main>
-    <section id="about"><h2>About Us</h2><p>We specialize in professional phone repairs and accessories in Windhoek, Namibia.</p></section>
-    <section id="mission"><h2>Our Mission</h2><p>To provide reliable, affordable, and expert services with free pickups and nationwide courier.</p></section>
-    <section id="services"><h2>Services</h2><ul class="services-list"><li>Screen Repair</li><li>Battery Replacement</li></ul></section>
-    <section id="accessories"><h2>Accessories</h2><div class="gallery"><img src="https://via.placeholder.com/150?text=Phone+Case" alt="Phone Case" /></div></section>
-    <section id="quote"><h2>Request a Quote</h2><form class="quote-form"><input type="text" placeholder="Name" /><input type="tel" placeholder="Phone" /></form></section>
-    <section id="contact"><h2>Contact Us</h2><p>📞 +264 81 435 5985</p></section>
-  </main>
-  <footer><p>&copy; 2025 NSK Phone Repair & Accessories</p></footer>
-</body>
-</html>
-"""
-
-# CSS content
-css_content = """
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f4f7f9;
@@ -69,30 +24,148 @@ body {
   color: #004080;
   text-decoration: none;
 }
-"""
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.quote-form {
+  display: grid;
+  gap: 15px;
+}
+.quote-form input, .quote-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.quote-form button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: not-allowed;
+  border-radius: 6px;
+}
+footer {
+  text-align: center;
+  background-color: #004080;
+  color: white;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}![Uploading image.png…]()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="QXkCVBc29V6k2V2Elm5wasHicEVcewsXF487Wn7hrVQ" />
+  <title>NSK Phone Repair & Accessories</title>
+  <meta name="description" content="NSK offers expert phone repairs and genuine accessories. Free delivery in Windhoek and courier nationwide.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-# Save files to disk
-html_path = "/mnt/data/index.html"
-css_path = "/mnt/data/styles.css"
-with open(html_path, "w") as f:
-    f.write(html_content)
-with open(css_path, "w") as f:
-    f.write(css_content)
+  <header class="hero">
+    <img src="nsk-logo.png" alt="NSK Logo" class="logo" />
+    <h1>NSK Phone Repair & Accessories</h1>
+    <p>Your trusted repair partner in Windhoek</p>
+  </header>
 
-# Generate placeholder logo image
-from PIL import Image, ImageDraw, ImageFont
+  <nav class="main-nav">
+    <a href="#about">About Us</a>
+    <a href="#mission">Mission</a>
+    <a href="#services">Services</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#quote">Request a Quote</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-logo_img = Image.new('RGB', (300, 100), color=(0, 64, 128))
-draw = ImageDraw.Draw(logo_img)
-draw.text((20, 30), "NSK", fill=(255, 255, 255))
-logo_path = "/mnt/data/nsk-logo.png"
-logo_img.save(logo_path)
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>NSK Phone Repair & Accessories is based in Windhoek, Namibia. We specialize in the repair of all phone models and the sale of high-quality phone accessories. We pride ourselves on speed, professionalism, and exceptional service.</p>
+    </section>
 
-# Create ZIP file
-zip_path = "/mnt/data/nsk_website_package.zip"
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    zipf.write(html_path, arcname="index.html")
-    zipf.write(css_path, arcname="styles.css")
-    zipf.write(logo_path, arcname="nsk-logo.png")
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p>Our mission is to provide reliable, affordable, and expert-level phone repair and accessory services, while making your experience as smooth as possible through free pickups and countrywide courier support.</p>
+    </section>
 
-zip_path
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li>Screen Repair</li>
+        <li>Back Glass Replacement</li>
+        <li>Software Installation</li>
+        <li>Battery Replacement</li>
+        <li>Motherboard Repair and Installation</li>
+        <li>Speaker Repair</li>
+        <li>iCloud Bypass</li>
+        <li>Buying & Selling of Apple Devices</li>
+        <li><strong>✅ Free Pickups & Deliveries in Windhoek</strong></li>
+        <li><strong>✅ Nationwide Courier Available</strong></li>
+      </ul>
+    </section>
+
+    <section id="accessories">
+      <h2>Phone Accessories</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=150&q=80" alt="Phone Case" />
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=150&q=80" alt="Screen Protector" />
+        <img src="https://images.unsplash.com/photo-1611186871348-bd93e728b44e?auto=format&fit=crop&w=150&q=80" alt="Charger" />
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155222a162?auto=format&fit=crop&w=150&q=80" alt="Earphones" />
+        <img src="https://images.unsplash.com/photo-1571607385069-02d1987a4e87?auto=format&fit=crop&w=150&q=80" alt="Power Bank" />
+        <img src="https://images.unsplash.com/photo-1573497019410-6c8790bd7c41?auto=format&fit=crop&w=150&q=80" alt="Bluetooth Speaker" />
+      </div>
+    </section>
+
+    <section id="quote">
+      <h2>Request a Quote</h2>
+      <form class="quote-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <label for="device">Device Model:</label>
+        <input type="text" id="device" name="device" required />
+        <label for="service">Service Needed:</label>
+        <input type="text" id="service" name="service" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <button type="submit" disabled>Submit (form not connected)</button>
+      </form>
+      <p><em>* Form not connected yet. Use WhatsApp or Email to send your request.</em></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>📍 Location:</strong> Shop No. 3, Fidel Castro Street, Opposite Wernhill Park, Windhoek</p>
+      <p><strong>📞 Phone:</strong> <a href="tel:+264814355985">+264 81 435 5985</a></p>
+      <p><strong>📧 Email:</strong> <a href="mailto:naftalkashikuka@gmail.com">naftalkashikuka@gmail.com</a></p>
+      <p><strong>📸 Instagram:</strong> <a href="https://instagram.com/nsk_accesories" target="_blank">@nsk_accesories</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NSK Phone Repair & Accessories. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
